@@ -22,7 +22,17 @@ The system models a warehouse with **54 storage locations**. Operators can selec
 
 ## 2. System Architecture
 
-![System architecture diagram](docs/system-architecture.png)
+
+<p align="center">
+  <img src="docs/system%20architecture.png"
+       alt="Automated Warehouse System Architecture"
+       width="450">
+</p>
+
+<p align="center">
+  <em>Figure 1. System architecture of the automated warehouse prototype.</em>
+</p>
+  
 
 *Figure 1. System architecture of the automated warehouse prototype (diagram provided by the project author).*
 
