@@ -34,8 +34,6 @@ The system models a warehouse with **54 storage locations**. Operators can selec
 </p>
   
 
-*Figure 1. System architecture of the automated warehouse prototype (diagram provided by the project author).*
-
 The diagram illustrates the system's principal data path: **Factory I/O** simulates warehouse equipment and communicates with the **Siemens S7-1500 PLC**; the PLC publishes data through an **MQTT broker**, which **Node-RED** subscribes to and processes. From Node-RED, **REST APIs** connect to **GreaterWMS** for inventory data, while the **web UI** presents dashboard monitoring. The diagram emphasizes the monitoring/data flow; operator commands and return paths are also implemented in the Node-RED flows and should not be inferred solely from the one-way arrows shown.
 
 The repository does not include a hosted or ready-to-run GreaterWMS instance.
