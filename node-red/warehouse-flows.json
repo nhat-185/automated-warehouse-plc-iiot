@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "8903768964c73608",
+    "type": "tab",
+    "label": "General",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "e352e3a2b0e91bd6",
+    "type": "tab",
+    "label": "Display detail",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "19de933b175759b7",
+    "type": "tab",
+    "label": "PLC S7",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "8d3521f1b6858ac7",
+    "type": "ui_tab",
+    "name": "Home",
+    "icon": "dashboard",
+    "order": 1,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "6c95c5cfb4777747",
+    "type": "ui_base",
+    "theme": {
+      "name": "theme-custom",
+      "lightTheme": {
+        "default": "#0094CE",
+        "baseColor": "#1831af",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "darkTheme": {
+        "default": "#097479",
+        "baseColor": "#038087",
+        "baseFont": "Times New Roman,Times,serif",
+        "edited": true,
+        "reset": false
+      },
+      "customTheme": {
+        "name": "Untitled Theme 1",
+        "default": "#4B7930",
+        "baseColor": "#303278",
+        "baseFont": "Times New Roman,Times,serif",
+        "reset": false
+      },
+      "themeState": {
+        "base-color": {
+          "default": "#4B7930",
+          "value": "#303278",
+          "edited": true
+        },
+        "page-titlebar-backgroundColor": {
+          "value": "#34114f",
+          "edited": true
+        },
+        "page-backgroundColor": {
+          "value": "#111111",
+          "edited": false
+        },
+        "page-sidebar-backgroundColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "group-textColor": {
+          "value": "#fbff00",
+          "edited": true
+        },
+        "group-borderColor": {
+          "value": "#99ad00",
+          "edited": true
+        },
+        "group-backgroundColor": {
+          "value": "#186354",
+          "edited": true
+        },
+        "widget-textColor": {
+          "value": "#eeeeee",
+          "edited": false
+        },
+        "widget-backgroundColor": {
+          "value": "#181a4e",
+          "edited": true
+        },
+        "widget-borderColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "base-font": {
+          "value": "Times New Roman,Times,serif"
+        }
+      },
+      "angularTheme": {
+        "primary": "indigo",
+        "accents": "blue",
+        "warn": "red",
+        "background": "grey",
+        "palette": "light"
+      }
+    },
+    "site": {
+      "name": "Node-RED Dashboard",
+      "hideToolbar": "false",
+      "allowSwipe": "false",
+      "lockMenu": "false",
+      "allowTempTheme": "false",
+      "dateFormat": "DD/MM/YYYY",
+      "sizes": {
+        "sx": 80,
+        "sy": 80,
+        "gx": 6,
+        "gy": 6,
+        "cx": 6,
+        "cy": 6,
+        "px": 0,
+        "py": 0
+      }
+    }
+  },
+  {
+    "id": "3b7467c929d1ec13",
+    "type": "ui_tab",
+    "name": "Detail Inventory",
+    "icon": "dashboard",
+    "order": 2,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "1ec90f9c93c5a5e6",
+    "type": "ui_group",
+    "name": "General",
+    "tab": "8d3521f1b6858ac7",
+    "order": 1,
+    "disp": true,
+    "width": "9",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "8ada14646e736d43",
+    "type": "ui_group",
+    "name": "Stock List",
+    "tab": "3b7467c929d1ec13",
+    "order": 1,
+    "disp": true,
+    "width": "2",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "463d87ec75e762b8",
+    "type": "ui_group",
+    "name": "Bin List",
+    "tab": "3b7467c929d1ec13",
+    "order": 3,
+    "disp": true,
+    "width": "3",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "dcc9b920eed42980",
+    "type": "ui_group",
+    "name": "Empty Bin",
+    "tab": "3b7467c929d1ec13",
+    "order": 2,
+    "disp": true,
+    "width": "3",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "1c81a677902d154c",
+    "type": "ui_group",
+    "name": "Occupied Bin",
+    "tab": "3b7467c929d1ec13",
+    "order": 4,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "6f533e434a8de798",
+    "type": "ui_group",
+    "name": "Chart",
+    "tab": "8d3521f1b6858ac7",
+    "order": 2,
+    "disp": true,
+    "width": "9",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "af8b76aef082e254",
+    "type": "s7 endpoint",
+    "transport": "iso-on-tcp",
+    "address": "127.0.0.1",
+    "port": "102",
+    "rack": "0",
+    "slot": "1",
+    "localtsaphi": "01",
+    "localtsaplo": "00",
+    "remotetsaphi": "01",
+    "remotetsaplo": "00",
+    "connmode": "rack-slot",
+    "adapter": "",
+    "busaddr": 2,
+    "cycletime": 1000,
+    "timeout": 2000,
+    "name": "",
+    "vartable": [
+      {
+        "addr": "I0.0",
+        "name": "Start_Btn"
+      }
+    ]
+  },
+  {
+    "id": "bb4837b969a4afcb",
+    "type": "mqtt-broker",
+    "name": "",
+    "broker": "127.0.0.1",
+    "port": 1883,
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": 4,
+    "keepalive": 60,
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "8cc7c115dff5546b",
+    "type": "ui_tab",
+    "name": "Warehouse Control",
+    "icon": "dashboard",
+    "order": 3,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "2c0ddeee3f0a8fa7",
+    "type": "ui_group",
+    "name": "Monitor",
+    "tab": "8cc7c115dff5546b",
+    "order": 1,
+    "disp": true,
+    "width": "7",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "8ad5fddfe6f5314b",
+    "type": "mqtt-broker",
+    "name": "",
+    "broker": "broker.hivemq.com",
+    "port": 1883,
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": 4,
+    "keepalive": 60,
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "5ac3cc304a13e1ee",
+    "type": "mqtt-broker",
+    "name": "",
+    "broker": "127.0.0.1",
+    "port": 1883,
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": 4,
+    "keepalive": 60,
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "70298ce7b0cce688",
+    "type": "mqtt-broker",
+    "name": "",
+    "broker": "127.0.0.1",
+    "port": 1883,
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": 4,
+    "keepalive": 60,
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "058c3d80aed6d305",
+    "type": "mqtt-broker",
+    "name": "",
+    "broker": "127.0.0.1",
+    "port": 1883,
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": 4,
+    "keepalive": 60,
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "cf8b06b99007a95b",
+    "type": "ui_group",
+    "name": "Temperature",
+    "tab": "",
+    "order": 1,
+    "disp": true,
+    "width": 6,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "245c3a0f2746897b",
+    "type": "ui_group",
+    "name": "Humidity",
+    "tab": "",
+    "order": 2,
+    "disp": true,
+    "width": 6,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "955a4bab3c7dd649",
+    "type": "ui_group",
+    "name": "CO2",
+    "tab": "",
+    "order": 3,
+    "disp": true,
+    "width": 6,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "0a622dbce040194e",
+    "type": "ui_group",
+    "name": "O2 ",
+    "tab": "",
+    "order": 4,
+    "disp": true,
+    "width": 6,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "a1f982ae242c21a1",
+    "type": "ui_group",
+    "name": "DO ",
+    "tab": "",
+    "order": 5,
+    "disp": true,
+    "width": 6,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "c341c4258340bc36",
+    "type": "inject",
+    "z": "8903768964c73608",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 460,
+    "wires": [
+      [
+        "6133077115f2c23e"
+      ]
+    ]
+  },
+  {
+    "id": "6d55c3b63cbbca19",
+    "type": "function",
+    "z": "8903768964c73608",
+    "name": "function bin list",
+    "func": "msg.payload = msg.payload.count;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 760,
+    "y": 440,
+    "wires": [
+      [
+        "626bcb7c16403824",
+        "990174e90bc5b47f"
+      ]
+    ]
+  },
+  {
+    "id": "96c7b355ea8a75d5",
+    "type": "http request",
+    "z": "8903768964c73608",
+    "name": "http request bin list",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/binset/?empty_label=false&page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 470,
+    "y": 400,
+    "wires": [
+      [
+        "6d55c3b63cbbca19"
+      ]
+    ]
+  },
+  {
+    "id": "626bcb7c16403824",
+    "type": "ui_text",
+    "z": "8903768964c73608",
+    "group": "1ec90f9c93c5a5e6",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "Total Bins",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#000000",
+    "x": 980,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "e1b3fa0727cf308a",
+    "type": "ui_text",
+    "z": "8903768964c73608",
+    "group": "1ec90f9c93c5a5e6",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "Empty Bins",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#000000",
+    "x": 1030,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "08aab4ad21fc2899",
+    "type": "ui_text",
+    "z": "8903768964c73608",
+    "group": "1ec90f9c93c5a5e6",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "Occupied Bins",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#000000",
+    "x": 1020,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "6133077115f2c23e",
+    "type": "function",
+    "z": "8903768964c73608",
+    "name": "function token",
+    "func": "msg.headers = {\n    token: \"REPLACE_WITH_GREATERWMS_TOKEN\",\n    \"Content-Type\": \"application/json\"\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 240,
+    "y": 380,
+    "wires": [
+      [
+        "96c7b355ea8a75d5",
+        "ccca9e8d823c924e",
+        "2f225861e17c720a"
+      ]
+    ]
+  },
+  {
+    "id": "2f225861e17c720a",
+    "type": "http request",
+    "z": "8903768964c73608",
+    "name": "http request empty bin",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/binset/?empty_label=true&page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 480,
+    "y": 500,
+    "wires": [
+      [
+        "5345c52021a00dcb"
+      ]
+    ]
+  },
+  {
+    "id": "ccca9e8d823c924e",
+    "type": "http request",
+    "z": "8903768964c73608",
+    "name": "http request occupied bin ",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/binset/?empty_label=false&page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 470,
+    "y": 320,
+    "wires": [
+      [
+        "b868ee26eb63d016"
+      ]
+    ]
+  },
+  {
+    "id": "5345c52021a00dcb",
+    "type": "function",
+    "z": "8903768964c73608",
+    "name": "function empty bin ",
+    "func": "msg.payload = msg.payload.count;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 750,
+    "y": 540,
+    "wires": [
+      [
+        "e1b3fa0727cf308a",
+        "67771cb401027a57"
+      ]
+    ]
+  },
+  {
+    "id": "b868ee26eb63d016",
+    "type": "function",
+    "z": "8903768964c73608",
+    "name": "function occupied bin ",
+    "func": "msg.payload = msg.payload.count;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 760,
+    "y": 320,
+    "wires": [
+      [
+        "08aab4ad21fc2899",
+        "718edd94dbf86f6d"
+      ]
+    ]
+  },
+  {
+    "id": "cc0cd6279296b318",
+    "type": "ui_chart",
+    "z": "8903768964c73608",
+    "name": "",
+    "group": "6f533e434a8de798",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "label": "General Chart",
+    "chartType": "bar",
+    "legend": "true",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "20",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#0083e0",
+      "#ff0000",
+      "#00ff40",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1420,
+    "y": 400,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "305e90b5557acc53",
+    "type": "function",
+    "z": "8903768964c73608",
+    "name": "func chart",
+    "func": "let occupied = flow.get(\"occupied\") || 0;\nlet empty = flow.get(\"empty\") || 0;\nlet total = flow.get(\"total\") || 0;\n\nmsg.payload = [\n    {\n        series: [\"Empty\", \"Occupied\", \"Total\"],\n        data: [\n            [empty],\n            [occupied],\n            [total]\n        ],\n        labels: [\"Bins\"]\n    }\n];\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1220,
+    "y": 400,
+    "wires": [
+      [
+        "cc0cd6279296b318"
+      ]
+    ]
+  },
+  {
+    "id": "718edd94dbf86f6d",
+    "type": "change",
+    "z": "8903768964c73608",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "occupied",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1030,
+    "y": 260,
+    "wires": [
+      [
+        "305e90b5557acc53"
+      ]
+    ]
+  },
+  {
+    "id": "67771cb401027a57",
+    "type": "change",
+    "z": "8903768964c73608",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "empty",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1020,
+    "y": 600,
+    "wires": [
+      [
+        "305e90b5557acc53"
+      ]
+    ]
+  },
+  {
+    "id": "990174e90bc5b47f",
+    "type": "change",
+    "z": "8903768964c73608",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "total",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1010,
+    "y": 400,
+    "wires": [
+      [
+        "305e90b5557acc53"
+      ]
+    ]
+  },
+  {
+    "id": "4b706f6d345ba9e5",
+    "type": "inject",
+    "z": "e352e3a2b0e91bd6",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 290,
+    "y": 500,
+    "wires": [
+      [
+        "e495645f6dd623de"
+      ]
+    ]
+  },
+  {
+    "id": "e495645f6dd623de",
+    "type": "function",
+    "z": "e352e3a2b0e91bd6",
+    "name": "function token",
+    "func": "msg.headers = {\n    token: \"REPLACE_WITH_GREATERWMS_TOKEN\",\n    \"Content-Type\": \"application/json\"\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 480,
+    "y": 500,
+    "wires": [
+      [
+        "9a6eb59adaf24864",
+        "9768e68af0d8b517",
+        "749888ae5ca650d0",
+        "05bb501cf1667b1c",
+        "0a9ebf8abbcb00a7",
+        "f5195d8d8f85c9d4",
+        "732ed2618ae57821",
+        "8f37768836da2b15"
+      ]
+    ]
+  },
+  {
+    "id": "6403778b14cd9b18",
+    "type": "function",
+    "z": "e352e3a2b0e91bd6",
+    "name": "func ",
+    "func": "let pages = msg.payload;\nlet allResults = [];\n\nfor (let page of pages) {\n    if (page && Array.isArray(page.results)) {\n        allResults = allResults.concat(page.results);\n    }\n}\n\n// bỏ trùng theo goods_code\nlet map = {};\nfor (let item of allResults) {\n    map[item.goods_code] = item;\n}\n\nlet uniqueResults = Object.values(map);\n\nuniqueResults.sort((a, b) => a.goods_code.localeCompare(b.goods_code));\n\nmsg.payload = uniqueResults.map(item => ({\n    goods_code: item.goods_code\n}));\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1250,
+    "y": 260,
+    "wires": [
+      [
+        "91b71e605879511f"
+      ]
+    ]
+  },
+  {
+    "id": "91b71e605879511f",
+    "type": "ui_table",
+    "z": "e352e3a2b0e91bd6",
+    "group": "8ada14646e736d43",
+    "name": "Table Stock List",
+    "order": 1,
+    "width": "2",
+    "height": "25",
+    "columns": [
+      {
+        "field": "goods_code",
+        "title": "Goods Code",
+        "width": "120",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 0,
+    "cts": false,
+    "x": 1420,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "ada6e15301f45e73",
+    "type": "function",
+    "z": "e352e3a2b0e91bd6",
+    "name": "func ",
+    "func": "let pages = msg.payload;\nlet allResults = [];\n\nfor (let page of pages) {\n    if (page && Array.isArray(page.results)) {\n        allResults = allResults.concat(page.results);\n    }\n}\n\n// bỏ trùng\nlet map = {};\nfor (let item of allResults) {\n    map[item.bin_name] = item;\n}\n\nlet uniqueResults = Object.values(map);\n\nuniqueResults.sort((a, b) => a.bin_name.localeCompare(b.bin_name));\n\nmsg.payload = uniqueResults.map(item => ({\n    bin_name: item.bin_name,\n    empty_label: item.empty_label\n}));\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1250,
+    "y": 520,
+    "wires": [
+      [
+        "dc2f0dde7b5f5b0e"
+      ]
+    ]
+  },
+  {
+    "id": "dc2f0dde7b5f5b0e",
+    "type": "ui_table",
+    "z": "e352e3a2b0e91bd6",
+    "group": "1c81a677902d154c",
+    "name": "Table Occpied Bin",
+    "order": 1,
+    "width": 4,
+    "height": "25",
+    "columns": [
+      {
+        "field": "bin_name",
+        "title": "Bin Name",
+        "width": "140",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "empty_label",
+        "title": "Empty Label",
+        "width": "120",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 0,
+    "cts": false,
+    "x": 1470,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "87edc2ef3238c26c",
+    "type": "function",
+    "z": "e352e3a2b0e91bd6",
+    "name": "func ",
+    "func": "let pages = msg.payload;\nlet allResults = [];\n\nfor (let page of pages) {\n    if (page && Array.isArray(page.results)) {\n        allResults = allResults.concat(page.results);\n    }\n}\n\n// bỏ trùng\nlet map = {};\nfor (let item of allResults) {\n    map[item.bin_name] = item;\n}\n\nlet uniqueResults = Object.values(map);\n\nuniqueResults.sort((a, b) => a.bin_name.localeCompare(b.bin_name));\n\nmsg.payload = uniqueResults.map(item => ({\n    bin_name: item.bin_name,\n    empty_label: item.empty_label\n}));\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1190,
+    "y": 720,
+    "wires": [
+      [
+        "22eaeab049dd2f60"
+      ]
+    ]
+  },
+  {
+    "id": "9a6eb59adaf24864",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request occupied bin 1",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/binset/?empty_label=false&page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 820,
+    "y": 520,
+    "wires": [
+      [
+        "ceac91be3fe4eda7"
+      ]
+    ]
+  },
+  {
+    "id": "749888ae5ca650d0",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request empty bin 1",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/binset/?empty_label=true&page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 750,
+    "y": 700,
+    "wires": [
+      [
+        "c6cd0ec7e857bda8"
+      ]
+    ]
+  },
+  {
+    "id": "aabb48def3afac9e",
+    "type": "function",
+    "z": "e352e3a2b0e91bd6",
+    "name": "func ",
+    "func": "let pages = msg.payload;\nlet allResults = [];\n\nfor (let page of pages) {\n    if (page && Array.isArray(page.results)) {\n        allResults = allResults.concat(page.results);\n    }\n}\n\nallResults.sort((a, b) => a.bin_name.localeCompare(b.bin_name));\n\nmsg.payload = allResults.map(item => ({\n    bin_name: item.bin_name,\n    goods_code: item.goods_code || \"A000036\"\n}));\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1250,
+    "y": 400,
+    "wires": [
+      [
+        "da2b6e2ae020e307"
+      ]
+    ]
+  },
+  {
+    "id": "da2b6e2ae020e307",
+    "type": "ui_table",
+    "z": "e352e3a2b0e91bd6",
+    "group": "463d87ec75e762b8",
+    "name": "Table Bin List",
+    "order": 1,
+    "width": "3",
+    "height": "25",
+    "columns": [
+      {
+        "field": "bin_name",
+        "title": "Bin Name",
+        "width": "120",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "goods_code",
+        "title": "Goods Code",
+        "width": "120",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 0,
+    "cts": false,
+    "x": 1470,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "9768e68af0d8b517",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request bin list 1",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/stock/bin/?page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 820,
+    "y": 400,
+    "wires": [
+      [
+        "eac330ac67f0b574"
+      ]
+    ]
+  },
+  {
+    "id": "22eaeab049dd2f60",
+    "type": "ui_table",
+    "z": "e352e3a2b0e91bd6",
+    "group": "dcc9b920eed42980",
+    "name": "Table Empty Bin",
+    "order": 1,
+    "width": "3",
+    "height": "25",
+    "columns": [
+      {
+        "field": "bin_name",
+        "title": "Bin Name",
+        "width": "140",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "empty_label",
+        "title": "Empty Label",
+        "width": "120",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 0,
+    "cts": false,
+    "x": 1440,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "05bb501cf1667b1c",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request empty bin 2",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/binset/?empty_label=true&page=2",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 750,
+    "y": 780,
+    "wires": [
+      [
+        "c6cd0ec7e857bda8"
+      ]
+    ]
+  },
+  {
+    "id": "c6cd0ec7e857bda8",
+    "type": "join",
+    "z": "e352e3a2b0e91bd6",
+    "name": "join empty bin",
+    "mode": "custom",
+    "build": "array",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "useparts": false,
+    "accumulate": false,
+    "timeout": "",
+    "count": "2",
+    "reduceRight": false,
+    "reduceExp": "",
+    "reduceInit": "",
+    "reduceInitType": "",
+    "reduceFixup": "",
+    "x": 1020,
+    "y": 720,
+    "wires": [
+      [
+        "87edc2ef3238c26c"
+      ]
+    ]
+  },
+  {
+    "id": "732ed2618ae57821",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request occupied bin 2",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/binset/?empty_label=false&page=2",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 820,
+    "y": 560,
+    "wires": [
+      [
+        "ceac91be3fe4eda7"
+      ]
+    ]
+  },
+  {
+    "id": "ceac91be3fe4eda7",
+    "type": "join",
+    "z": "e352e3a2b0e91bd6",
+    "name": "join occupied bin",
+    "mode": "custom",
+    "build": "array",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "useparts": false,
+    "accumulate": false,
+    "timeout": "",
+    "count": "2",
+    "reduceRight": false,
+    "reduceExp": "",
+    "reduceInit": "",
+    "reduceInitType": "",
+    "reduceFixup": "",
+    "x": 1070,
+    "y": 520,
+    "wires": [
+      [
+        "ada6e15301f45e73"
+      ]
+    ]
+  },
+  {
+    "id": "8f37768836da2b15",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request bin list 2",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/stock/bin/?page=2",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 820,
+    "y": 440,
+    "wires": [
+      [
+        "eac330ac67f0b574"
+      ]
+    ]
+  },
+  {
+    "id": "eac330ac67f0b574",
+    "type": "join",
+    "z": "e352e3a2b0e91bd6",
+    "name": "join bin list",
+    "mode": "custom",
+    "build": "array",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "useparts": false,
+    "accumulate": false,
+    "timeout": "",
+    "count": "2",
+    "reduceRight": false,
+    "reduceExp": "",
+    "reduceInit": "",
+    "reduceInitType": "",
+    "reduceFixup": "",
+    "x": 1050,
+    "y": 400,
+    "wires": [
+      [
+        "aabb48def3afac9e"
+      ]
+    ]
+  },
+  {
+    "id": "f5195d8d8f85c9d4",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request stock list 1",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/stock/list/?ordering=-update_time&page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 820,
+    "y": 280,
+    "wires": [
+      [
+        "28898e554296bdc3"
+      ]
+    ]
+  },
+  {
+    "id": "28898e554296bdc3",
+    "type": "join",
+    "z": "e352e3a2b0e91bd6",
+    "name": "join stock list",
+    "mode": "custom",
+    "build": "array",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "useparts": false,
+    "accumulate": false,
+    "timeout": "",
+    "count": "2",
+    "reduceRight": false,
+    "reduceExp": "",
+    "reduceInit": "",
+    "reduceInitType": "",
+    "reduceFixup": "",
+    "x": 1060,
+    "y": 280,
+    "wires": [
+      [
+        "6403778b14cd9b18",
+        "f7af4414773ff85c"
+      ]
+    ]
+  },
+  {
+    "id": "f7af4414773ff85c",
+    "type": "debug",
+    "z": "e352e3a2b0e91bd6",
+    "name": "debug 7",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1240,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "0a9ebf8abbcb00a7",
+    "type": "http request",
+    "z": "e352e3a2b0e91bd6",
+    "name": "http request stock list 2",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/stock/list/?ordering=-update_time&page=2",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 820,
+    "y": 320,
+    "wires": [
+      [
+        "28898e554296bdc3"
+      ]
+    ]
+  },
+  {
+    "id": "30e00f1693c7aec7",
+    "type": "mqtt out",
+    "z": "19de933b175759b7",
+    "name": "MQTT out - PLC command",
+    "topic": "",
+    "qos": "0",
+    "retain": "false",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "broker": "5ac3cc304a13e1ee",
+    "x": 1540,
+    "y": 1040,
+    "wires": []
+  },
+  {
+    "id": "d25c73bd347d6591",
+    "type": "ui_numeric",
+    "z": "19de933b175759b7",
+    "name": "Select store slot",
+    "label": "Store slot",
+    "tooltip": "",
+    "group": "2c0ddeee3f0a8fa7",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "wrap": false,
+    "passthru": true,
+    "topic": "topic",
+    "topicType": "msg",
+    "format": "{{value}}",
+    "min": "1",
+    "max": "54",
+    "step": 1,
+    "className": "",
+    "x": 740,
+    "y": 1080,
+    "wires": [
+      [
+        "eab3bb3e75ae95d3"
+      ]
+    ]
+  },
+  {
+    "id": "eab3bb3e75ae95d3",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Save selected slot",
+    "func": "flow.set(\"store_slot\", msg.payload);\nreturn null;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1010,
+    "y": 1080,
+    "wires": [
+      [
+        "30e00f1693c7aec7"
+      ]
+    ]
+  },
+  {
+    "id": "537255ca22806ad2",
+    "type": "ui_button",
+    "z": "19de933b175759b7",
+    "name": "Button STORE",
+    "group": "2c0ddeee3f0a8fa7",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "STORE",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 740,
+    "y": 1120,
+    "wires": [
+      [
+        "9ee6ccdc275f3161"
+      ]
+    ]
+  },
+  {
+    "id": "9ee6ccdc275f3161",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Build STORE command",
+    "func": "let slot = flow.get(\"store_slot\") || 1;\n\nmsg.topic = \"factoryio/warehouse/cmd/store\";\nmsg.payload = String(slot);\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 990,
+    "y": 1120,
+    "wires": [
+      [
+        "30e00f1693c7aec7"
+      ]
+    ]
+  },
+  {
+    "id": "ae272ea877824791",
+    "type": "ui_button",
+    "z": "19de933b175759b7",
+    "name": "Button START",
+    "group": "2c0ddeee3f0a8fa7",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "START",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "START",
+    "payloadType": "str",
+    "topic": "factoryio/warehouse/cmd/system",
+    "topicType": "msg",
+    "x": 740,
+    "y": 980,
+    "wires": [
+      [
+        "a68cb1c855997581"
+      ]
+    ]
+  },
+  {
+    "id": "57aeb571970e8351",
+    "type": "ui_button",
+    "z": "19de933b175759b7",
+    "name": "Button STOP",
+    "group": "2c0ddeee3f0a8fa7",
+    "order": 6,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "STOP",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "STOP",
+    "payloadType": "str",
+    "topic": "factoryio/warehouse/cmd/system",
+    "topicType": "msg",
+    "x": 750,
+    "y": 1020,
+    "wires": [
+      [
+        "2c9d1c18f33f222a"
+      ]
+    ]
+  },
+  {
+    "id": "08e2083cc3a79659",
+    "type": "ui_numeric",
+    "z": "19de933b175759b7",
+    "name": "Select retrive slot",
+    "label": "Retrive slot",
+    "tooltip": "",
+    "group": "2c0ddeee3f0a8fa7",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "wrap": false,
+    "passthru": true,
+    "topic": "topic",
+    "topicType": "msg",
+    "format": "{{value}}",
+    "min": "1",
+    "max": "54",
+    "step": 1,
+    "className": "",
+    "x": 730,
+    "y": 1180,
+    "wires": [
+      [
+        "183886e12fbb9506"
+      ]
+    ]
+  },
+  {
+    "id": "183886e12fbb9506",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Save retrieve slot",
+    "func": "flow.set(\"retrieve_slot\", msg.payload);\nreturn null;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1010,
+    "y": 1180,
+    "wires": [
+      [
+        "30e00f1693c7aec7"
+      ]
+    ]
+  },
+  {
+    "id": "73d0b9ab05123f62",
+    "type": "ui_button",
+    "z": "19de933b175759b7",
+    "name": "Button RETRIEVE",
+    "group": "2c0ddeee3f0a8fa7",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "RETRIEVE",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 730,
+    "y": 1220,
+    "wires": [
+      [
+        "2b11db1d538ab7ca"
+      ]
+    ]
+  },
+  {
+    "id": "2b11db1d538ab7ca",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Build RETRIEVE command",
+    "func": "let slot = flow.get(\"retrieve_slot\") || 1;\n\nmsg.topic = \"factoryio/warehouse/cmd/retrieve\";\nmsg.payload = String(slot);\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 980,
+    "y": 1220,
+    "wires": [
+      [
+        "30e00f1693c7aec7"
+      ]
+    ]
+  },
+  {
+    "id": "a68cb1c855997581",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Build START command",
+    "func": "msg.topic = \"factoryio/warehouse/cmd/system\";\nmsg.payload = \"START\";\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 990,
+    "y": 980,
+    "wires": [
+      [
+        "30e00f1693c7aec7"
+      ]
+    ]
+  },
+  {
+    "id": "2c9d1c18f33f222a",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Build STOP command",
+    "func": "msg.topic = \"factoryio/warehouse/cmd/system\";\nmsg.payload = \"STOP\";\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1000,
+    "y": 1020,
+    "wires": [
+      [
+        "30e00f1693c7aec7"
+      ]
+    ]
+  },
+  {
+    "id": "951d7db6760749f0",
+    "type": "mqtt in",
+    "z": "19de933b175759b7",
+    "name": "MQTT in - Warehouse bin status",
+    "topic": "factoryio/warehouse/bin_status",
+    "qos": "0",
+    "datatype": "auto-detect",
+    "broker": "5ac3cc304a13e1ee",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 690,
+    "y": 1340,
+    "wires": [
+      [
+        "3bad7d8f6fdb78c5"
+      ]
+    ]
+  },
+  {
+    "id": "3bad7d8f6fdb78c5",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "function decode bin status",
+    "func": "let raw = String(msg.payload).trim();\nraw = raw.replace(/\\+/g, \"\");\n\nlet parts = raw.split(\",\");\n\nlet binIndex = Number(parts[0]);\nlet state = Number(parts[1]);\n\nif (binIndex < 1 || binIndex > 54) {\n    node.error(\"Bin index ngoài phạm vi 1-54: \" + binIndex, msg);\n    return null;\n}\n\nlet suffix = String(binIndex).padStart(2, \"0\");\nlet binName = \"A0101\" + suffix;\n\nlet binId;\nif (binIndex <= 3) {\n    binId = binIndex;\n} else {\n    binId = binIndex + 9;\n}\n\nmsg.payload = {\n    bin_index: binIndex,\n    id: binId,\n    bin_name: binName,\n    bin_size: \"Tiny\",\n    bin_property: \"Normal\",\n    creater: \"DemoData\",\n    empty_label: state === 1,\n    occupied: state === 0\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 670,
+    "y": 1280,
+    "wires": [
+      [
+        "d95c8ac06d729644"
+      ]
+    ]
+  },
+  {
+    "id": "d95c8ac06d729644",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "build update GreaterWMS request",
+    "func": "msg.method = \"PUT\";\n\nmsg.url = \"http://127.0.0.1:8008/binset/\" + msg.payload.id + \"/\";\n\nmsg.headers = {\n    token: \"REPLACE_WITH_GREATERWMS_TOKEN\",\n    \"Content-Type\": \"application/json\"\n};\n\nmsg.payload = {\n    id: msg.payload.id,\n    bin_name: msg.payload.bin_name,\n    bin_size: msg.payload.bin_size,\n    bin_property: msg.payload.bin_property,\n    creater: msg.payload.creater,\n    empty_label: msg.payload.empty_label,\n    bar_code: msg.payload.bin_name\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 960,
+    "y": 1280,
+    "wires": [
+      [
+        "28be4ad591058f21"
+      ]
+    ]
+  },
+  {
+    "id": "28be4ad591058f21",
+    "type": "http request",
+    "z": "19de933b175759b7",
+    "name": "PUT binset",
+    "method": "PUT",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1210,
+    "y": 1280,
+    "wires": [
+      [
+        "4d6fc823434d097d"
+      ]
+    ]
+  },
+  {
+    "id": "83e851748c3d2f21",
+    "type": "inject",
+    "z": "19de933b175759b7",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1880,
+    "y": 420,
+    "wires": [
+      [
+        "bd06b16abe1f19fd"
+      ]
+    ]
+  },
+  {
+    "id": "bd06b16abe1f19fd",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "function token",
+    "func": "msg.headers = {\n    token: \"REPLACE_WITH_GREATERWMS_TOKEN\",\n    \"Content-Type\": \"application/json\"\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2080,
+    "y": 420,
+    "wires": [
+      [
+        "e67e8f5714202811"
+      ]
+    ]
+  },
+  {
+    "id": "e67e8f5714202811",
+    "type": "http request",
+    "z": "19de933b175759b7",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8008/stock/bin/?page=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 2290,
+    "y": 420,
+    "wires": [
+      [
+        "3870b554c28de911"
+      ]
+    ]
+  },
+  {
+    "id": "3870b554c28de911",
+    "type": "debug",
+    "z": "19de933b175759b7",
+    "name": "debug 5",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2480,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "c4bfb82162634679",
+    "type": "ui_button",
+    "z": "19de933b175759b7",
+    "name": "Button RESET Warehouse",
+    "group": "2c0ddeee3f0a8fa7",
+    "order": 8,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "RESET WAREHOUSE",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "reset",
+    "payloadType": "str",
+    "topic": "reset_warehouse",
+    "topicType": "msg",
+    "x": 700,
+    "y": 1440,
+    "wires": [
+      [
+        "2397be87757aabc6",
+        "b17f9449c92382c1"
+      ]
+    ]
+  },
+  {
+    "id": "2397be87757aabc6",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Build reset 54 bins",
+    "func": "const token = \"REPLACE_WITH_GREATERWMS_TOKEN\";\n\nlet messages = [];\n\nfor (let binIndex = 1; binIndex <= 54; binIndex++) {\n    let suffix = String(binIndex).padStart(2, \"0\");\n    let binName = \"A0101\" + suffix;\n\n    let binId;\n    if (binIndex <= 3) {\n        binId = binIndex;\n    } else {\n        binId = binIndex + 9;\n    }\n\n    messages.push({\n        method: \"PUT\",\n        url: \"http://127.0.0.1:8008/binset/\" + binId + \"/\",\n        headers: {\n            token: token,\n            \"Content-Type\": \"application/json\"\n        },\n        payload: {\n            id: binId,\n            bin_name: binName,\n            bin_size: \"Tiny\",\n            bin_property: \"Normal\",\n            creater: \"DemoData\",\n            empty_label: true,\n            bar_code: binName\n        }\n    });\n}\n\nreturn [messages];",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1010,
+    "y": 1440,
+    "wires": [
+      [
+        "e0667b92f47e7d42"
+      ]
+    ]
+  },
+  {
+    "id": "e0667b92f47e7d42",
+    "type": "http request",
+    "z": "19de933b175759b7",
+    "name": "PUT reset bin empty",
+    "method": "use",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1240,
+    "y": 1440,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "183f49a2423eeaf3",
+    "type": "http request",
+    "z": "19de933b175759b7",
+    "name": "http request reset stock/bin",
+    "method": "use",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1260,
+    "y": 1500,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "b17f9449c92382c1",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "Build reset stock/bin",
+    "func": "msg.method = \"POST\";\nmsg.url = \"http://127.0.0.1:8008/stock/bin/reset/\";\n\nmsg.headers = {\n    token: \"REPLACE_WITH_GREATERWMS_TOKEN\",\n    \"Content-Type\": \"application/json\"\n};\n\nmsg.payload = {};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1000,
+    "y": 1500,
+    "wires": [
+      [
+        "183f49a2423eeaf3"
+      ]
+    ]
+  },
+  {
+    "id": "4d6fc823434d097d",
+    "type": "function",
+    "z": "19de933b175759b7",
+    "name": "function create/update stockbin",
+    "func": "let bin = msg.payload;\n\nif (!bin || !bin.bin_name) {\n    return null;\n}\n\nif (bin.empty_label !== false) {\n    return null;\n}\n\nmsg.method = \"POST\";\nmsg.url = \"http://127.0.0.1:8008/stock/bin/plc_update/\";\n\nmsg.headers = {\n    token: \"REPLACE_WITH_GREATERWMS_TOKEN\",\n    \"Content-Type\": \"application/json\"\n};\n\nmsg.payload = {\n    bin_name: bin.bin_name,\n    goods_code: \"A000036\",\n    goods_desc: \"Goods Desc-36\",\n    goods_qty: 1,\n    pick_qty: 0,\n    picked_qty: 0,\n    bin_size: bin.bin_size || \"Tiny\",\n    bin_property: bin.bin_property || \"Normal\",\n    t_code: bin.bin_name,\n    openid: \"init_data\"\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1450,
+    "y": 1280,
+    "wires": [
+      [
+        "12fe388d63ac4f0d"
+      ]
+    ]
+  },
+  {
+    "id": "12fe388d63ac4f0d",
+    "type": "http request",
+    "z": "19de933b175759b7",
+    "name": "http request stockbin",
+    "method": "use",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 1420,
+    "y": 1340,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ebd09ef339e807dd",
+    "type": "global-config",
+    "env": [],
+    "modules": {
+      "node-red-dashboard": "3.6.6",
+      "node-red-contrib-s7": "3.1.3",
+      "node-red-node-ui-table": "0.4.5"
+    }
+  }
+]
