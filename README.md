@@ -93,35 +93,192 @@ This is an **individual project**. My implementation and integration work includ
 
 GreaterWMS is an existing open-source platform used in the project; I do **not** claim to have developed the GreaterWMS software itself.
 
-## 6. Demonstration
 
-A representative test sequence uses **Bin05**:
+## 6. System Demonstration
 
-1. Select the target bin from the Node-RED dashboard.
-2. Send a **STORE** command and observe the simulated warehouse operation.
-3. Check the resulting bin-status update on the dashboard and WMS interface.
-4. Send a **RETRIEVE** command for the same bin.
-5. Verify that the bin returns to the empty state.
+This section presents the main components of the automated warehouse prototype, including the Factory I/O simulation, PLC communication, Node-RED integration flows, GreaterWMS inventory data, and operator dashboards.
 
-Screenshots and/or a short demonstration video can be added to this section:
+### 6.1. Automated Warehouse Simulation — Factory I/O
 
-<!-- Replace the placeholders below with actual files or links after adding them. -->
-- Factory I/O warehouse overview: *to be added*
-- Node-RED dashboard: *to be added*
-- GreaterWMS inventory view: *to be added*
-- STORE / RETRIEVE demonstration video: *to be added*
+The automated warehouse was modeled in Factory I/O with 54 storage locations, a conveyor system, and an automated storage and retrieval mechanism.
+
+The simulation provides a virtual environment for testing warehouse operations and PLC-based control logic without requiring physical industrial equipment.
+
+<p align="center">
+  <img src="docs/factory-io-warehouse.png" alt="Factory I/O Automated Warehouse" width="800">
+</p>
+
+<p align="center">
+  <em>Figure 2. Automated warehouse simulation in Factory I/O.</em>
+</p>
+
+### 6.2. PLC Programming and MQTT Communication
+
+The PLC control program was developed in Siemens TIA Portal using an S7-1500 controller.
+
+MQTT communication was incorporated into the PLC program to support data exchange with the Node-RED integration layer through an MQTT broker.
+
+The screenshot below shows the MQTT client function block configured within the PLC main program.
+
+<p align="center">
+  <img src="docs/tia-portal-mqtt.png" alt="TIA Portal MQTT Client Function Block" width="850">
+</p>
+
+<p align="center">
+  <em>Figure 3. MQTT client function block in Siemens TIA Portal.</em>
+</p>
+
+### 6.3. Node-RED Integration and Data Processing
+
+Node-RED was used to develop the warehouse monitoring interface and integrate inventory information from GreaterWMS.
+
+The example flow performs the following operations:
+
+1. Initiates HTTP requests to GreaterWMS API endpoints.
+2. Retrieves inventory and storage-location information.
+3. Processes occupied-bin, empty-bin, and bin-list data using function nodes.
+4. Updates dashboard indicators and the general chart.
+
+<p align="center">
+  <img src="docs/node-red-api-flow.png" alt="Node-RED Inventory API Flow" width="850">
+</p>
+
+<p align="center">
+  <em>Figure 4. Node-RED flow for inventory data retrieval, processing, and dashboard visualization.</em>
+</p>
+
+### 6.4. GreaterWMS Inventory Integration
+
+GreaterWMS was used as an open-source warehouse management platform.
+
+Inventory information was retrieved through REST API endpoints and displayed in the Node-RED monitoring interface.
+
+The screenshot below shows the Empty Bin section of GreaterWMS, including storage-location identifiers and availability status.
+
+<p align="center">
+  <img src="docs/greaterwms-inventory.png" alt="GreaterWMS Empty Bin Inventory" width="850">
+</p>
+
+<p align="center">
+  <em>Figure 5. Empty-bin inventory information displayed in GreaterWMS.</em>
+</p>
+
+### 6.5. Node-RED Monitoring and Control Dashboards
+
+The Node-RED Dashboard was organized into three main interfaces: Home, Detail Inventory, and Warehouse Control.
+
+#### A. Home — Warehouse Overview
+
+The Home dashboard provides a summary of warehouse storage status, including:
+
+- Occupied bins
+- Empty bins
+- Total bins
+- A graphical overview of bin occupancy
+
+<p align="center">
+  <img src="docs/dashboard-overview.png" alt="Node-RED Warehouse Overview Dashboard" width="850">
+</p>
+
+<p align="center">
+  <em>Figure 6. Node-RED warehouse overview dashboard.</em>
+</p>
+
+#### B. Detail Inventory — Inventory Monitoring
+
+The Detail Inventory dashboard displays warehouse information retrieved from GreaterWMS.
+
+It includes four main tables:
+
+- **Stock List:** Available product records.
+- **Empty Bin:** Storage locations marked as available.
+- **Bin List:** Storage-location and product associations.
+- **Occupied Bin:** Storage locations marked as occupied.
+
+<p align="center">
+  <img src="docs/dashboard-inventory.png" alt="Node-RED Detail Inventory Dashboard" width="850">
+</p>
+
+<p align="center">
+  <em>Figure 7. Node-RED detailed inventory monitoring interface.</em>
+</p>
+
+#### C. Warehouse Control — Operator Interface
+
+The Warehouse Control dashboard provides an interface for issuing warehouse commands.
+
+Available controls include:
+
+- **Store Slot:** Select the destination storage location.
+- **STORE:** Issue a storage command.
+- **Retrieve Slot:** Select the storage location for retrieval.
+- **RETRIEVE:** Issue a retrieval command.
+- **START:** Start the warehouse control process.
+- **STOP:** Stop the warehouse control process.
+- **RESET WAREHOUSE:** Reset the warehouse control state.
+
+<p align="center">
+  <img src="docs/dashboard-control.png" alt="Node-RED Warehouse Control Dashboard" width="750">
+</p>
+
+<p align="center">
+  <em>Figure 8. Node-RED operator interface for warehouse storage and retrieval commands.</em>
+</p>
+
+### 6.6. Storage and Retrieval Workflow
+
+The prototype supports operator-initiated storage and retrieval operations through the Node-RED control interface.
+
+**Storage workflow (STORE):**
+
+1. The operator selects a destination storage slot.
+2. The operator issues a STORE command through Node-RED.
+3. The command is communicated to the PLC through MQTT.
+4. The PLC executes the corresponding control sequence in Factory I/O.
+5. Warehouse status information can be monitored through the integrated interfaces.
+
+**Retrieval workflow (RETRIEVE):**
+
+1. The operator selects a storage slot for retrieval.
+2. The operator issues a RETRIEVE command through Node-RED.
+3. The PLC receives the command and executes the retrieval sequence.
+4. The simulated storage mechanism retrieves the item.
+5. The resulting warehouse status is monitored through the dashboard.
+
+The prototype was developed and tested in a simulation environment. The project demonstrates the integration of industrial PLC control, MQTT-based communication, Node-RED monitoring, and GreaterWMS inventory-data access.
+
+
 
 ## 7. Repository Structure
 
+The repository is organized as follows:
+
 ```text
-automated_warehouse_portfolio/
+automated-warehouse-plc-iiot/
 ├── README.md
-├── docs/           # System architecture diagram
-│   └── system-architecture.png
-├── factory-io/     # Factory I/O scene file
-├── node-red/       # Sanitized Node-RED flow export (JSON)
-└── plc/            # Archived TIA Portal V17 project (.zap17)
+├── docs/
+│   ├── system-architecture.png
+│   ├── factory-io-warehouse.png
+│   ├── tia-portal-mqtt.png
+│   ├── node-red-api-flow.png
+│   ├── greaterwms-inventory.png
+│   ├── dashboard-overview.png
+│   ├── dashboard-inventory.png
+│   └── dashboard-control.png
+├── factory-io/
+│   └── New.factoryio
+├── node-red/
+│   └── warehouse-flows.json
+└── plc/
+    └── Automated_Warehouse_PLC_S7-1500.zap17
 ```
+
+**Directory Description:**
+
+- **`docs/`**: System architecture diagram and screenshots of the Factory I/O simulation, TIA Portal, Node-RED flows, GreaterWMS integration, and monitoring dashboards.
+- **`factory-io/`**: Factory I/O simulation scene of the automated warehouse.
+- **`node-red/`**: Exported Node-RED flows for monitoring, warehouse control, MQTT communication, and GreaterWMS REST API integration.
+- **`plc/`**: Archived Siemens TIA Portal V17 PLC project containing the warehouse control program.
 
 ## 8. How to Inspect the Project
 
